@@ -4,7 +4,7 @@
 
 
 <h:head>
-
+	<h:outputStylesheet library="css" name="styles.css"></h:outputStylesheet>
 </h:head>
 
 <h:body>
@@ -13,13 +13,16 @@
 
 		<h:panelGrid columns="2">
 
-			<h:outputLabel value="Usuario:* "></h:outputLabel>
-			<h:inputText id="txtUsuario" value="#{loginController.usuario}" required="true" requiredMessage="El usuario es requerido."></h:inputText>
+			<h:outputLabel value="Usuario:* " styleClass="colorText"></h:outputLabel>
+			<h:inputText id="txtUsuario" value="#{loginController.usuario}"
+				required="true" requiredMessage="El usuario es requerido."></h:inputText>
 
-			<h:outputLabel value="Contraseña:* "></h:outputLabel>
-			<h:inputSecret id="txtPassword" value="#{loginController.password}" required="true" requiredMessage="La contraseña es requerida."></h:inputSecret>
-			
-			<h:commandButton value="Ingresar" action="#{loginController.ingresar}"></h:commandButton>
+			<h:outputLabel value="Contraseña:* " styleClass="colorText"></h:outputLabel>
+			<h:inputSecret id="txtPassword" value="#{loginController.password}"
+				required="true" requiredMessage="La contraseña es requerida."></h:inputSecret>
+
+			<h:commandButton value="Ingresar"
+				action="#{loginController.ingresar}"></h:commandButton>
 
 		</h:panelGrid>
 
